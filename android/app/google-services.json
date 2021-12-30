@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "432374715181",
+    "project_id": "run-to-dreams",
+    "storage_bucket": "run-to-dreams.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432374715181:android:3fe15ba68f815ca8ef39a4",
+        "android_client_info": {
+          "package_name": "com.sportapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432374715181-vsgdqsquiph3te19ln2p7mte39ju7h25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASt2oXoyg6QX9Z6rqOn-fMC4tpFOmJN2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432374715181-vsgdqsquiph3te19ln2p7mte39ju7h25.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "432374715181-4jej3c53onct6n7bijdlvtmo3kokjdlm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SportApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
