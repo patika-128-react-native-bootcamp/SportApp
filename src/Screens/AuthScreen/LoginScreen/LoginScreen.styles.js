@@ -14,10 +14,5 @@ export default StyleSheet.create({
     height: sizes.logo,
     alignSelf: 'center',
   },
-  input_container: {
-    marginBottom: spacing.large,
-  },
-  button_container: {
-    marginTop: spacing.large,
-  },
+  input_container: {},
 });
