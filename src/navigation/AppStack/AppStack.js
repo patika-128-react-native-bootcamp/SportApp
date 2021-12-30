@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 
 const AppStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="AuthStack" component={AuthStack} />
       {/* <Stack.Screen name="MainTab" component={MainTab} /> */}
     </Stack.Navigator>
