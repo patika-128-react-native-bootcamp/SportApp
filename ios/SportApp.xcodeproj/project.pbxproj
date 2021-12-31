@@ -13,8 +13,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		448E2DD6744447B78B5CD430 /* Oswald-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9F52642A5C3470AA3D035F4 /* Oswald-VariableFont_wght.ttf */; };
 		736005EEB538ED13C655CD3D /* libPods-SportApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13049D3303D5AB11A6067775 /* libPods-SportApp.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C3207A26277E4CB300BC3671 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3207A25277E4CB300BC3671 /* GoogleService-Info.plist */; };
+		C3498966277F67EA00E0E94C /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3498965277F67EA00E0E94C /* BootSplash.storyboard */; };
 		EECDF9FA176C0DE22EA9FAA7 /* libPods-SportApp-SportAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B418E65BE0104FE2B854A3 /* libPods-SportApp-SportAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -40,13 +40,13 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SportApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SportApp/main.m; sourceTree = "<group>"; };
 		4119E58BFFEEAE5CE043477F /* Pods-SportApp-SportAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportApp-SportAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SportApp-SportAppTests/Pods-SportApp-SportAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SportApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B597E04E24654252C4C11C0 /* Pods-SportApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportApp.release.xcconfig"; path = "Target Support Files/Pods-SportApp/Pods-SportApp.release.xcconfig"; sourceTree = "<group>"; };
 		8EE83EED02D8BB1EF8B0F68D /* Pods-SportApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportApp.debug.xcconfig"; path = "Target Support Files/Pods-SportApp/Pods-SportApp.debug.xcconfig"; sourceTree = "<group>"; };
 		99B418E65BE0104FE2B854A3 /* libPods-SportApp-SportAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SportApp-SportAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D836DF218E24C825249AFF3 /* Pods-SportApp-SportAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportApp-SportAppTests.release.xcconfig"; path = "Target Support Files/Pods-SportApp-SportAppTests/Pods-SportApp-SportAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		B9F52642A5C3470AA3D035F4 /* Oswald-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Oswald-VariableFont_wght.ttf"; path = "../src/assets/Fonts/Oswald-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		C3207A25277E4CB300BC3671 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Users/emre/Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C3498965277F67EA00E0E94C /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = SportApp/BootSplash.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -90,11 +90,11 @@
 		13B07FAE1A68108700A75B9A /* SportApp */ = {
 			isa = PBXGroup;
 			children = (
+				C3498965277F67EA00E0E94C /* BootSplash.storyboard */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = SportApp;
@@ -257,10 +257,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				C3207A26277E4CB300BC3671 /* GoogleService-Info.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				448E2DD6744447B78B5CD430 /* Oswald-VariableFont_wght.ttf in Resources */,
+				C3498966277F67EA00E0E94C /* BootSplash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
