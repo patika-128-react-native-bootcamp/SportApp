@@ -2,7 +2,6 @@ import {StyleSheet} from 'react-native';
 
 import colors from '../../../styles/colors';
 import sizes from '../../../styles/sizes';
-import spacing from '../../../styles/spacing';
 
 export default StyleSheet.create({
   container: {
@@ -10,9 +9,8 @@ export default StyleSheet.create({
     backgroundColor: colors.primary,
   },
   logo: {
-    width: sizes.logo,
-    height: sizes.logo,
+    width: sizes.logo_small,
+    height: sizes.logo_small,
     alignSelf: 'center',
   },
-  input_container: {},
 });

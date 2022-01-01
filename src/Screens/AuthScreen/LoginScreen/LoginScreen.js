@@ -1,33 +1,45 @@
-import React from 'react';
-import {Image, SafeAreaView, View, StatusBar} from 'react-native';
+import React, {useState} from 'react';
+import {Image, SafeAreaView, StatusBar, Text} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 import {Formik} from 'formik';
+import {showMessage} from 'react-native-flash-message';
 
 import styles from './LoginScreen.styles';
 import Input from '../../../components/Input';
 import Button from '../../../components/Button';
 import LoginValidator from './ValidationSchema';
+import authErrorMessageParser from '../../../utils/authErrorMessageParser';
 // import useFetch from '../../../hooks/useFetch';
 
-const initialValues = {
+const initialFormValues = {
   email: '',
   password: '',
 };
 
 const LoginScreen = () => {
   const navigation = useNavigation();
-  // const {loading, error} = useFetch();
+  const [loading, setLoading] = useState(false);
 
-  const handleLogin = async formValues => {
+  const handleLoginSubmit = async formValues => {
     try {
+      setLoading(true);
       await auth().signInWithEmailAndPassword(
         formValues.email,
         formValues.password,
       );
-      navigation.navigate(null);
-    } catch (err) {
-      console.log(err);
+      showMessage({
+        message: 'Login Successful',
+        type: 'success',
+      });
+      setLoading(false);
+      navigation.navigate('NewActivityScreen');
+    } catch (error) {
+      showMessage({
+        message: authErrorMessageParser(error.code),
+        type: 'danger',
+      });
+      setLoading(false);
     }
   };
 
@@ -47,30 +59,38 @@ const LoginScreen = () => {
         source={require('../../../assets/logos/Logo_transparent.png')}
       />
       <Formik
-        initialValues={initialValues}
-        onSubmit={handleLogin}
-        validationSchema={LoginValidator}>
-        {({handleChange, handleSubmit, values}) => (
-          <View style={styles.input_container}>
+        initialValues={initialFormValues}
+        onSubmit={handleLoginSubmit}
+        validationSchema={LoginValidator}
+        validateOnBlur={false}
+        validateOnChange={false}>
+        {({handleChange, values, handleSubmit, errors, touched}) => (
+          <>
             <Input
               autoFocus
               placeholder="Enter your e-mail..."
-              onChangeTest={handleChange('email')}
+              onChangeText={handleChange('email')}
               value={values.email}
             />
+            {errors.email && touched.email ? (
+              <Text style={styles.error}> {errors.email}</Text>
+            ) : null}
             <Input
               isSecure
               placeholder="Enter your password..."
-              onChangeTest={handleChange('password')}
+              onChangeText={handleChange('password')}
               value={values.password}
             />
-            <Button label="Login" onPress={null} />
+            {errors.password && touched.password ? (
+              <Text style={styles.error}>{errors.password}</Text>
+            ) : null}
+            <Button label="Login" onPress={handleSubmit} loading={loading} />
             <Button
               theme="secondary_button"
               label="Signup"
               onPress={handleSignupNavigation}
             />
-          </View>
+          </>
         )}
       </Formik>
     </SafeAreaView>
