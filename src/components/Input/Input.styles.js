@@ -12,7 +12,7 @@ export default StyleSheet.create({
     borderRadius: radius.smooth,
     fontSize: sizes.title,
     height: sizes.button_box,
-    paddingHorizontal: spacing.small,
+    paddingHorizontal: spacing.medium,
     margin: spacing.small,
     fontFamily: font.font,
   },
