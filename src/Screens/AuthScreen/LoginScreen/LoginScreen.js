@@ -32,8 +32,8 @@ const LoginScreen = () => {
         message: 'Login Successful',
         type: 'success',
       });
-      setLoading(false);
       navigation.navigate('NewActivityScreen');
+      setLoading(false);
     } catch (error) {
       showMessage({
         message: authErrorMessageParser(error.code),

@@ -3,8 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import auth from '@react-native-firebase/auth';
 
 import AuthStack from '../AuthStack';
-// import MainTab from '../MainTab';
-import NewActivityScreen from '../../Screens/NewActivityScreen';
+import MainTab from '../MainTab';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,9 +20,11 @@ const AppStack = () => {
         <Stack.Screen name="AuthStack" component={AuthStack} />
       ) : (
         <Stack.Screen
-          name="NewActivityScreen"
-          component={NewActivityScreen}
-          options={{gestureEnabled: false}}
+          name="MainTab"
+          component={MainTab}
+          options={{
+            gestureEnabled: false,
+          }}
         />
       )}
     </Stack.Navigator>

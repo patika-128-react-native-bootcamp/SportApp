@@ -46,6 +46,7 @@
 		9D836DF218E24C825249AFF3 /* Pods-SportApp-SportAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportApp-SportAppTests.release.xcconfig"; path = "Target Support Files/Pods-SportApp-SportAppTests/Pods-SportApp-SportAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		B9F52642A5C3470AA3D035F4 /* Oswald-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Oswald-VariableFont_wght.ttf"; path = "../src/assets/Fonts/Oswald-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		C3498965277F67EA00E0E94C /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = SportApp/BootSplash.storyboard; sourceTree = "<group>"; };
+		C376C90227818EB6002C99D5 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		C399356A2781876200F12AE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -120,6 +121,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				C376C90127818E92002C99D5 /* Fonts */,
 				C399356A2781876200F12AE5 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* SportApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -149,6 +151,14 @@
 				B9F52642A5C3470AA3D035F4 /* Oswald-VariableFont_wght.ttf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		C376C90127818E92002C99D5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C376C90227818EB6002C99D5 /* MaterialCommunityIcons.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		F6FB90140569CD10DAA1E33C /* Pods */ = {
