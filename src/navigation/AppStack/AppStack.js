@@ -14,6 +14,7 @@ const AppStack = () => {
       setUserSession(!!user);
     });
   }, []);
+
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       {!userSession ? (

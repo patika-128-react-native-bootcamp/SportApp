@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Image, SafeAreaView, StatusBar, Text} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
@@ -10,7 +10,6 @@ import Input from '../../../components/Input';
 import Button from '../../../components/Button';
 import LoginValidator from './ValidationSchema';
 import authErrorMessageParser from '../../../utils/authErrorMessageParser';
-// import useFetch from '../../../hooks/useFetch';
 
 const initialFormValues = {
   email: '',
@@ -19,11 +18,9 @@ const initialFormValues = {
 
 const LoginScreen = () => {
   const navigation = useNavigation();
-  const [loading, setLoading] = useState(false);
 
   const handleLoginSubmit = async formValues => {
     try {
-      setLoading(true);
       await auth().signInWithEmailAndPassword(
         formValues.email,
         formValues.password,
@@ -33,23 +30,17 @@ const LoginScreen = () => {
         type: 'success',
       });
       navigation.navigate('NewActivityScreen');
-      setLoading(false);
     } catch (error) {
       showMessage({
         message: authErrorMessageParser(error.code),
         type: 'danger',
       });
-      setLoading(false);
     }
   };
 
   const handleSignupNavigation = () => {
     navigation.navigate('SignupScreen');
   };
-
-  // if (loading) {
-  //   return <ActivityIndicator size={30} />;
-  // }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -84,7 +75,7 @@ const LoginScreen = () => {
             {errors.password && touched.password ? (
               <Text style={styles.error}>{errors.password}</Text>
             ) : null}
-            <Button label="Login" onPress={handleSubmit} loading={loading} />
+            <Button label="Login" onPress={handleSubmit} />
             <Button
               theme="secondary_button"
               label="Signup"

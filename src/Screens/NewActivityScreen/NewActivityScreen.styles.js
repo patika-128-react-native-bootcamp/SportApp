@@ -3,11 +3,8 @@ import {StyleSheet} from 'react-native';
 import colors from '../../styles/colors';
 
 export default StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   map_container: {
-    height: 615,
+    height: 400,
   },
   map_viewport: {
     left: 0,
