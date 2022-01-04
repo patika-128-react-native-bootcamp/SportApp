@@ -4,7 +4,7 @@ import colors from '../../styles/colors';
 
 export default StyleSheet.create({
   map_container: {
-    height: 400,
+    height: 350,
   },
   map_viewport: {
     left: 0,

@@ -5,7 +5,7 @@ import auth from '@react-native-firebase/auth';
 
 import NewActivityScreen from '../../Screens/NewActivityScreen';
 import DashboardScreen from '../../Screens/DashboardScreen';
-import PastActivityScreen from '../../Screens/PastActivityScreen';
+import DetailStack from '../DetailStack';
 import LeaderboardScreen from '../../Screens/LeaderboardScreen';
 import styles from './MainTab.styles';
 import colors from '../../styles/colors';
@@ -71,8 +71,8 @@ const MainTab = () => {
         }}
       />
       <Tab.Screen
-        name="PastActivityScreen"
-        component={PastActivityScreen}
+        name="DetailStack"
+        component={DetailStack}
         options={{
           tabBarActiveTintColor: colors.secondary,
           tabBarInactiveTintColor: colors.black,
