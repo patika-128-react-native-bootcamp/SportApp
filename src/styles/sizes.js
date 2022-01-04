@@ -4,4 +4,5 @@ export default {
   button_box: 40,
   logo: 250,
   logo_small: 150,
+  info_box: 110,
 };
