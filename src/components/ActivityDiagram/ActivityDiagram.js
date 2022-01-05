@@ -23,16 +23,7 @@ const ActivityDiagram = () => {
           ],
           datasets: [
             {
-              data: [
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-              ],
+              data: [10, 15, 15, 3, 4, 7, 6, 10],
             },
           ],
         }}
