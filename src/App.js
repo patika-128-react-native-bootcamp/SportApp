@@ -2,7 +2,6 @@ import React from 'react';
 import RNBootSplash from 'react-native-bootsplash';
 
 import Navigation from './Navigation';
-import AuthProvider from './Context/Auth';
 
 const App = () => {
   React.useEffect(() => {
@@ -10,11 +9,7 @@ const App = () => {
       RNBootSplash.hide();
     }, 1000);
   }, []);
-  return (
-    <AuthProvider>
-      <Navigation />
-    </AuthProvider>
-  );
+  return <Navigation />;
 };
 
 export default App;
